@@ -301,12 +301,12 @@ if st.button("Submit", key="submit_button", disabled=st.session_state.submission
             st.session_state.submission_status = False
         finally:
             if st.session_state.submission_status:
-                st.success(f"Feedback form submitted and sent to {st.secrets['sender_email']}.")
+                st.success(f"Feedback form submitted successfully.")
             else:
                 st.stop()  # Force the spinner to stop if submission fails
 
-if st.session_state.submission_status:
-    st.success(f"Feedback form submitted and sent to {st.secrets['sender_email']}.")
+# if st.session_state.submission_status:
+#     st.success(f"Feedback form submitted and sent to {st.secrets['sender_email']}.")
 
 # streamlit run app.py
 # Dev: https://linkedin.com/in/osamatech786
